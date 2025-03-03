@@ -30,10 +30,10 @@ export default function App() {
         headers: {
           "Content-Type": "application/json",
         },
-        body:{
+        body:JSON.parse({
           ...task,
           dueDate: Date.now()
-        }
+        })
       })
       setTasks([...tasks, { ...task, id: Date.now(), }]);
     }
